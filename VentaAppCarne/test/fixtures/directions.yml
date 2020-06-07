@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sector: MyString
+  street: MyString
+  muni_n: MyString
+  comuna: MyString
+  unidad: MyString
+  n_unidad: MyString
+
+two:
+  sector: MyString
+  street: MyString
+  muni_n: MyString
+  comuna: MyString
+  unidad: MyString
+  n_unidad: MyString
