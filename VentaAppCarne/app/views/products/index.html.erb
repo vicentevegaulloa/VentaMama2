@@ -1,10 +1,32 @@
 <h1>Productos</h1><br><br>
 <%= link_to "Crear Producto", new_product_path %>
 <br><br>
-<% @products.each do |producto|%>
-<h2>
-<%= link_to producto.name, product_path(producto.id)%>|
-<%= link_to "Delete", product_path(producto.id), data: {method: :delete} %>|
-<%= link_to "Edit", edit_product_path(producto.id) %>
-</h2>
-<% end %>
+
+<br><br>
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Eliminar</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |producto|%>
+    <tr>
+      <th><%= producto.id%></th>
+      <td><%= link_to producto.name, product_path(producto.id)%></td>
+      <td><%= link_to "Delete", product_path(producto.id), data: {method: :delete} %></td>
+      <td><%= link_to "Edit", edit_product_path(producto.id) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>
