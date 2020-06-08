@@ -1,0 +1,39 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <p style="color: red"><%= error %></p>
+    <% end %>
+<% end %>
+
+
+<%= form_for @client do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+  <br>
+  <%= f.label :name_phone %>
+  <%= f.text_field :name_phone %>
+  <br>
+  <%= f.fields_for :direction_attributes do |builder|%>
+    <%= builder.label :sector %>
+    <%= builder.text_field :sector %>
+    <br>
+    <%= builder.label :street %>
+    <%= builder.text_field :street %>
+    <br>
+    <%= builder.label :muni_n %>
+    <%= builder.text_field :muni_n %>
+    <br>
+    <%= builder.label :comuna %>
+    <%= builder.text_field :comuna %>
+    <br>
+    <%= builder.label :unidad %>
+    <%= builder.text_field :unidad %>
+    <br>
+    <%= builder.label :n_unidad %>
+    <%= builder.text_field :n_unidad %>
+    <br>
+  <% end %>
+  <%= f.submit %>
+<% end %>

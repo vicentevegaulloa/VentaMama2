@@ -1,2 +1,5 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1>Product: <%= @product.name %></h1>
+
+<h1>Cuesta: <%= @product.unit_price %> el <%= @product.unit_metric %></h1>
+
+<%= link_to "Delete", @product, data: {method: :delete} %>

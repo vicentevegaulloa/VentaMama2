@@ -1,0 +1,9 @@
+<%= form_tag 'nueva_venta' do %>
+    <%=label_tag 'cliente' %>
+    <%=select_tag 'cliente', options_for_select(Client.all.collect{ |u| [u.name, u.id] }) %><br>
+    <%=label_tag 'producto' %>
+    <%=select_tag 'producto', options_for_select(Product.all.collect{ |u| [u.name, u.id] }) %><br>
+    <%=label_tag 'cantidad' %>
+    <%=number_field_tag('cantidad', value = 1, min:1) %><br>
+    <div><%= submit_tag 'Save' %></div>
+<% end %>
