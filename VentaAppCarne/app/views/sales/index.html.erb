@@ -1,2 +1,36 @@
-<h1>Sales#index</h1>
-<p>Find me in app/views/sales/index.html.erb</p>
+<h1>Ventas</h1><br><br>
+<%= link_to "Crear Venta", new_sale_path %>
+<br><br>
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Cliente</th>
+      <th>Productos</th>
+      <th>Eliminar</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sales.each do |venta|%>
+    <tr>
+      <th><%= link_to venta.id, sale_path(venta.id)%></th>
+      <td><%= link_to venta.client.name , client_path(venta.client.id)%></td>
+      <td>
+    <% venta.sale_products.each do |sp| %>
+    <%= sp.product.name %>(<%= sp.cantidad %>)
+    <% end %>
+      </td>
+      <td><%= link_to "Delete" %></td>
+      <td><%= link_to "Edit"%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,25 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <p style="color: red"><%= error %></p>
+    <% end %>
+<% end %>
+
+
+<%= form_for @sale do |f| %>
+  <%= f.label :client_id %>
+  <%= f.collection_select(:client_id, Client.all, :id, :name, prompt: true) %>
+  <br>
+  <%= f.fields_for :sale_states do |sf|%>
+    <%= sf.label :state_id %>
+    <%= sf.collection_select(:state_id, State.all, :id, :name, prompt: true) %>
+    <br>
+  <% end %>
+  <%= f.fields_for :sale_products do |pf|%>
+    <%= pf.label :product_id %>
+    <%= pf.collection_select(:product_id, Product.all, :id, :name, prompt: true) %>
+    <br>
+    <%= pf.label :cantidad %>
+    <%= pf.number_field :cantidad, min:1 %>
+  <% end %>
+  <%= f.submit %>
+<% end %>

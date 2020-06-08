@@ -1,2 +1,26 @@
-<h1>Sales#show</h1>
-<p>Find me in app/views/sales/show.html.erb</p>
+<h1>Sale <%= @sale.id %></h1>
+<h1>Cliente: <%= @sale.client.name %></h1>
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sale.sale_products.each do |sp| %>
+    <tr>
+      <th><%= link_to sp.product.name, product_path(sp.product.id)%></th>
+      <td><%= sp.cantidad %></td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>
