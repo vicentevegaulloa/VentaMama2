@@ -1,10 +1,30 @@
 <h1>Clientes</h1><br><br>
 <%= link_to "Crear Cliente", new_client_path %>
 <br><br>
-<% @clientes.each do |cliente|%>
-<h2>
-<%= link_to cliente.name, client_path(cliente.id)%>|
-<%= link_to "Delete", client_path(cliente.id), data: {method: :delete} %>|
-<%= link_to "Edit", edit_client_path(cliente.id) %>
-</h2>
-<% end %>
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Eliminar</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clientes.each do |cliente|%>
+    <tr>
+      <th><%= cliente.id%></th>
+      <td><%= link_to cliente.name, client_path(cliente.id)%></td>
+      <td><%= link_to "Delete", client_path(cliente.id), data: {method: :delete} %></td>
+      <td><%= link_to "Edit", edit_client_path(cliente.id) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>
