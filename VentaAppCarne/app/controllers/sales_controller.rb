@@ -17,20 +17,24 @@ class SalesController < ApplicationController
   end
 
   def show
-    
   end
 
   def edit
+    @sale = Sale.find(params[:id])
   end
 
+
   def update
-    @client.update(client_params)
-    redirect_to clients_path
+    if @sale.update_attributes(sale_params)
+      redirect_to sales_path
+    else
+      redirect_to edit_sale_path(@sale)
+    end
   end
 
   def destroy
-    @client.destroy
-    redirect_to clients_path
+    @sale.destroy
+    redirect_to sales_path
   end
 
   def set_sale
@@ -43,11 +47,13 @@ class SalesController < ApplicationController
       :client_id,
       sale_states_attributes:
         [
+          :id,
           :state_id,
           :_destroy
           ],
       sale_products_attributes:
         [
+          :id,
           :cantidad,
           :product_id,
           :_destroy

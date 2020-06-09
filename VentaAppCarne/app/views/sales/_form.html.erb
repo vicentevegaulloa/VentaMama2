@@ -9,17 +9,35 @@
   <%= f.label :client_id %>
   <%= f.collection_select(:client_id, Client.all, :id, :name, prompt: true) %>
   <br>
-  <%= f.fields_for :sale_states do |sf|%>
-    <%= sf.label :state_id %>
-    <%= sf.collection_select(:state_id, State.all, :id, :name, prompt: true) %>
-    <br>
-  <% end %>
-  <%= f.fields_for :sale_products do |pf|%>
-    <%= pf.label :product_id %>
-    <%= pf.collection_select(:product_id, Product.all, :id, :name, prompt: true) %>
-    <br>
-    <%= pf.label :cantidad %>
-    <%= pf.number_field :cantidad, min:1 %>
-  <% end %>
-  <%= f.submit %>
+  <div class="sale_states">
+    <%= f.fields_for :sale_states do |sf|%>
+      <%= render 'sale_state_fields', f: sf %>
+      <br>
+
+
+    <% end %>
+  </div>
+  <div id="sale_products">
+    <%= f.fields_for :sale_products do |pf|%>
+    <div class="field">
+      <%= render 'sale_product_fields', f: pf %>
+      <br>
+
+    </div>
+
+
+    <% end %>
+  </div>
+  <div class="form-actions">
+    <div class="links">
+      <%= link_to_add_association 'Add Product', f, :sale_products %>
+    </div>
+    <div class="links">
+      <%= link_to_add_association 'Add State', f, :sale_states %>
+    </div>
+    <%= f.submit %>
+
+
+  </div>
+
 <% end %>

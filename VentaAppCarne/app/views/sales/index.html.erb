@@ -24,8 +24,8 @@
     <%= sp.product.name %>(<%= sp.cantidad %>)
     <% end %>
       </td>
-      <td><%= link_to "Delete" %></td>
-      <td><%= link_to "Edit"%></td>
+      <td><%= link_to "Delete", sale_path(venta.id), method: :delete %></td>
+      <td><%= link_to "Edit", edit_sale_path(venta.id)%></td>
     </tr>
     <% end %>
   </tbody>
