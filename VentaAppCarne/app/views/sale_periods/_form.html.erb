@@ -1,0 +1,16 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <p style="color: red"><%= error %></p>
+    <% end %>
+<% end %>
+
+
+<%= form_for @sale_period do |f| %>
+  <%= f.label :start %>
+  <%= f.date_field :start %>
+  <br>
+  <%= f.label :end %>
+  <%= f.date_field :end %>
+  <br>
+  <%= f.submit %>
+<% end %>

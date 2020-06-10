@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_08_004412) do
+ActiveRecord::Schema.define(version: 2020_06_10_160344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 2020_06_08_004412) do
     t.integer "supp_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "estimated_weight"
+  end
+
+  create_table "sale_periods", force: :cascade do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sale_products", force: :cascade do |t|
@@ -51,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_06_08_004412) do
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "real_weight"
     t.index ["product_id"], name: "index_sale_products_on_product_id"
     t.index ["sale_id"], name: "index_sale_products_on_sale_id"
   end

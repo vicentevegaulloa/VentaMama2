@@ -1,0 +1,2 @@
+module SalePeriodsHelper
+end

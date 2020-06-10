@@ -7,15 +7,44 @@
 
 <%= form_for @product do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <% if @base %>
+    <%= f.text_field :name, value: @base.name%>
+  <% else %>
+    <%= f.text_field :name%>
+  <% end %>
+
   <br>
   <%= f.label :unit_price %>
-  <%= f.text_field :unit_price %>
+  <% if @base %>
+  <%= f.text_field :unit_price, value: @base.unit_price %>
+<% else %>
+<%= f.text_field :unit_price %>
+<% end %>
+
+
   <br>
   <%= f.label :unit_metric %>
+
+  <% if @base %>
+    <%= f.text_field :unit_metric, value: @base.unit_metric %>
+<% else %>
   <%= f.text_field :unit_metric %>
+<% end %>
+  <br>
+  <%= f.label :estimated_weight %>
+  <% if @base %>
+  <%= f.text_field :estimated_weight, value: @base.estimated_weight %>
+<% else %>
+<%= f.text_field :estimated_weight %>
+<% end %>
+
   <br>
   <%= f.label :supp_price %>
+  <% if @base %>
+    <%= f.text_field :supp_price, value: @base.supp_price %>
+<% else %>
   <%= f.text_field :supp_price %>
+<% end %>
+
   <%= f.submit %>
 <% end %>

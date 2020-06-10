@@ -5,6 +5,11 @@ class ProductsController < ApplicationController
     end
 
     def new
+      if params[:base_id]
+        @base = Product.find(params[:base_id])
+      else
+        @base = nil
+      end
       @product = Product.new
     end
 

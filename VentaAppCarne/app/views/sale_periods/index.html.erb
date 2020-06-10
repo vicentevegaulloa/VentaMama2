@@ -1,0 +1,36 @@
+<h1>Periodos de Venta</h1><br><br>
+<%= link_to "Crear Periodo", new_sale_period_path %>
+<br><br>
+
+<br><br>
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Inicio</th>
+      <th>Fin</th>
+      <th>Eliminar</th>
+      <th>Editar</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @sale_periods.each do |sp|%>
+    <tr>
+      <th><%= sp.id%></th>
+      <td><%= sp.start%></td>
+      <td><%= sp.end %></td>
+      <td><%= link_to "Delete", sale_period_path(sp.id), data: {method: :delete} %></td>
+      <td><%= link_to "Edit", edit_sale_period_path(sp.id) %></td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>

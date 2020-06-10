@@ -12,7 +12,8 @@
       <th>ID</th>
       <th>Nombre</th>
       <th>Eliminar</th>
-      <th>Editar</th>
+      <th>Editar (Afecta datos anteriores)</th>
+      <th>Actualiza</th>
     </tr>
   </thead>
   <tbody>
@@ -22,6 +23,7 @@
       <td><%= link_to producto.name, product_path(producto.id)%></td>
       <td><%= link_to "Delete", product_path(producto.id), data: {method: :delete} %></td>
       <td><%= link_to "Edit", edit_product_path(producto.id) %></td>
+      <td><%= link_to "Actualiza", new_product_path(:base_id => producto.id) %></td>
     </tr>
     <% end %>
   </tbody>

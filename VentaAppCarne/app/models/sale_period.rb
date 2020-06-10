@@ -1,0 +1,2 @@
+class SalePeriod < ApplicationRecord
+end
