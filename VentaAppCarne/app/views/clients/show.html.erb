@@ -1,5 +1,130 @@
-<h1>Client: <%= @client.name %></h1>
 
-<h1>Vive en: <%= @direction.sector %></h1>
+<h2>
+  <strong>Cliente</strong>
+</h2>
 
+<%= link_to "Edit", edit_client_path(@client.id) %> <br>
 <%= link_to "Delete", @client, data: {method: :delete} %>
+
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+
+<table class="table">
+
+  <tbody>
+    <tr>
+      <td>Nombre</td>
+      <td><%= @client.name %></td>
+    </tr>
+
+    <tr>
+      <td>Telefono</td>
+      <td><%= @client.phone %></td>
+    </tr>
+
+    <tr>
+      <td>Nombre en Celular</td>
+      <td><%= @client.name_phone %></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+</div>
+<br><br>
+<h2>
+  <strong>Dirección</strong>
+</h2>
+<% if @direction %>
+
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+<table class="table">
+
+  <tbody>
+    <tr>
+      <td>Sector</td>
+      <td><%= @direction.sector %></td>
+    </tr>
+
+    <tr>
+      <td>Calle</td>
+      <td><%= @direction.street %></td>
+    </tr>
+
+    <tr>
+      <td>Número</td>
+      <td><%= @direction.muni_n %></td>
+    </tr>
+
+    <tr>
+      <td>Comuna</td>
+      <td><%= @direction.comuna %></td>
+    </tr>
+
+    <tr>
+      <td>Vive en</td>
+      <td><%= @direction.unidad %></td>
+    </tr>
+    <% if @direction.unidad != "Casa" %>
+    <tr>
+      <td>Num</td>
+      <td><%= @direction.n_unidad %></td>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+</div>
+</div>
+</div>
+<% else %>
+
+<h2>El usuario no tiene direccón</h2>
+
+<% end %>
+<br><br>
+<h2>
+  <strong>Ventas</strong>
+</h2>
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Productos</th>
+      <th>Estados</th>
+      <th>Eliminar</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @client.sales.each do |venta|%>
+    <tr>
+      <th><%= link_to venta.id, sale_path(venta.id)%></th>
+      <td>
+    <% venta.sale_products.each do |sp| %>
+    <%= sp.product.name %>(<%= sp.cantidad %>)<br>
+    <% end %>
+    </td>
+    <td>
+    <% venta.states.each do |state| %>
+    <%= state.name %><br>
+    <% end %>
+      </td>
+      <td><%= link_to "Delete", sale_path(venta.id), method: :delete %></td>
+      <td><%= link_to "Edit", edit_sale_path(venta.id)%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>

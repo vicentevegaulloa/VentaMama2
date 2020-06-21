@@ -23,7 +23,7 @@
       <td><%= link_to venta.client.name , client_path(venta.client.id)%></td>
       <td>
     <% venta.sale_products.each do |sp| %>
-    <%= sp.product.name %>(<%= sp.cantidad %>)
+    <%= sp.product.name %>(<%= sp.cantidad %>)<br>
     <% end %>
       </td>
       <td><%= link_to "Delete", sale_path(venta.id), method: :delete %></td>
