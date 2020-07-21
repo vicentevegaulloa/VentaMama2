@@ -1,0 +1,224 @@
+N°;CLIENTE;RUTA;SECTOR;DIRECCION; FILETE NACIONAL ;VETADO NACIONAL;LISO NACIONAL;FILETE IMP;LOMO VETADO;LOMO LISO;COSTILLAR;ARROLLADO;VIENESAS;KG FILETE NACIONAL;KG VETADO NACIONAL;KG LISO NACIONAL;KG FILETE IMP;KG VETADO;KG LISO;KG COSTILLAR;KG ARROLLADO;KG VIENESAS;TOTAL VENTA;TOTAL JUAN;MARGEN
+1;ALEJANDRA CONCHA;;EL RECODO;CAMINO MONTAHUE 55 CASA 18; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+2;ALEJANDRA DEL RIO;V;CASA;AVDA. ANDALUÉ # 2638; -   ;;;1;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 17,980 ; $ 15,000 ; $ 2,980 
+3;ALEJANDRA FIGUEROA;;HUERTOS FAMILIARES;LOS PENSAMIENTOS 142 CASA 11 HUERTOS FAMILIARES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+4;ALEJANDRA JEREZ;;CASINO;CALLE G 1099 CASA 31 ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+5;ALEJANDRA PIZARRO;V;HUERTOS FAMILIARES;LAS MARGARITAS 1455 DEPTO. H305 EDIFICIO HUERTO PARQUE; -   ;;;;;;1;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 10,788 ; $ 9,000 ; $ 1,788 
+6;ALESSANDRO BENEDETTI;;LOMAS DE SAN SEBASTIÁN;PASAJE LOS AZAHARES 543 JARDINES DE ANTILHUE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+7;ALEX ALARCON;;CHIGUAYANTE;SANTO DOMINGO 177 CHIGUAYANTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+8;ALEX CEBALLOS;;HUERTOS FAMILIARES;AVDA. VIOLETA PARRA 1562 VILLA SPRING HILL; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+9;ALEX WOHLLK;;SAN PEDRO;GIJON 8 PARQUE REDISENCIAL LAGUNA GRANDE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+10;ALEXIA;;TALCAHUANO;CARLOS OLIVER 5606 PERALES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+11;ALICIA KRUM;;CONCEPCION;SAN MARTIN; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+12;ALICIA PUENTES;;TALCAHUANO;JAIME REPULLO 3620 TALCAHUANO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+13;ANDREA MARCHANT;;ANDALUE;PUCARA PONIENTE 2118; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+14;ANDREA SCHEEL;;EL VENADO;WILLIAMS O'REILLY 3196 EL VENADO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+15;ANDRES GUILOFF;;ANDALUE;AVDA NAHUELBUTA 1720 DPTO 51; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+16;ANGELA NEGRONI;;EL VENADO;HENRY CAHILL 3124; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+17;ANGÉLICA CÁRDENAS;;TALCAHUANO;CORBETA INDEPENDENCIA 13 POB. YOUNG TALCAHUANO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+18;ANITA LEZCANO;;EL VENADO;WILLIAM CONDON ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+19;ANNE CRORKAN;;ANDALUE;AVDA. ANDALUÉ # 2638 - CASA 5 MISMO CONDOMINIO CHRISTIAN; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+20;BARBARA CORREA;;CHIGUAYANTE;CAUPOLICAN 185; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+21;BELEN ASTETE;;TALCAHUANO;CABO RAPER 1014 POB SEÑORET LAS CANCHAS; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+22;BENITO ROMAN;;EL VENADO;JOHN MAC NAB 3357; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+23;BORIS VILLAGRAN;;SAN PEDRO;CAMILO MORI 1155 VILLA LOS CANELOS; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+24;CARLOS ROJAS;;ANDALUE;AVENIDA ANDALUE; 1 ;;;;;;2;;2;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 57,156 ; $ 43,600 ; $ 13,556 
+25;CARMEN BARAHONA;;CONCEPCION;ONGOLMO 255 DEPTO 101; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+26;CARMEN BUCHER;;ANDALUE;PUCARA PONIENTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+27;CARMEN GONZALEZ;;PARQUE RES LAGUNA GRANDE;GRANADA 1955; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+28;CAROLA HERRERA;;ANDALUE;ANTILCO CASA 12; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+29;CAROLINA DELGADO;;EL VENADO;WILLIAM WARD 3040; 2 ;;;;;;2;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 65,536 ; $ 48,000 ; $ 17,536 
+30;CATTERINA SOBENES;;ANDALUE;PUCARA PONIENTE 2102; 1 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,980 ; $ 15,000 ; $ 6,980 
+31;CECILIA CHAR;;HUERTOS FAMILIARES;LAS VIOLETAS 1651  CASA D; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+32;CECILIA GONZALEZ;;EL VENADO;JOHN POMEROY 3140; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+33;CHANY;;SAN PEDRO;AVDA. LAGUNA GRANDE 480 CASA 16 CONDOMINIO LOS OLIVOS; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+34;CHRISTIAN GUTIERREZ;;PARQUE RES LAGUNA GRANDE;ARMERIA 1949; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+35;CHRISTIAN HERRERA;;SAN PEDRO;PASAJE PEDRO LUNA 1111; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+36;CLAUDIA BECAR;;VILLUCO;VÍA DEL SOL 94 VILLUCO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+37;CLAUDIA BELLO;;CHIGUAYANTE;GRAHAM BELL PASAJE 2 - CASA 11 MANANTIALES CHIGUAYANTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+38;CLAUDIA CEPEDA;;EL VENADO;WILLIAN O'RAILY  3188; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+39;CLAUDIA FERNÁNDEZ;;CASA;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+40;CLAUDIA RIVAS;;LOMAS DE SAN SEBASTIÁN;COSME CHURRUCA 135 CASA 22 COND. SANTA BARBARA ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+41;CLAUDIO PEREZ;;ANDALUE;PUCARA PONIENTE 2352; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+42;CONSTANZA LEON;;LONCORAY;EMILIO EBENSPERGER 2876; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+43;CONSTANZA MONTORY;;CONCEPCION;SAN MARTIN 357; 1 ;;1;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 60,637 ; $ 44,670 ; $ 15,967 
+44;CONSUELO BARRIENTOS;;LOMAS DE SAN SEBASTIÁN;SANTO TOMAS BECKET 544 CASA 12; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+45;CRISTIAN BURGOS;;ANDALUE;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+46;CRISTIAN DELCORTO;V;LOMAS SAN SEBASTIAN;RAMON SUBERCASEAUX 892; -   ;1;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 24,975 ; $ 18,250 ; $ 6,725 
+47;CRISTIAN GALLARDO;;CASA;CASA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+48;CRISTIAN SOTO;V;CASA;; 1 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,980 ; $ 15,000 ; $ 6,980 
+49;CRISTINA ROJAS;;ANDALUE;AVENIDA ANDALUE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+50;CYNTHIA AMSTEIN;;ANDALUE;MALEN ORIENTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+51;DANIELA  VASQUEZ;;ANDALUE;ANTUCO 420 CASA 15; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+52;DANIELA PAREDES;;ANDALUE;AVENIDA ANDALUE 1440 DEPTO 804 TORRE 3; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+53;DENIS DE LA FUENTE;;LOMAS DE SAN SEBASTIÁN;RAMON CARRASCO 1231 CASA 121; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+54;DORIS;;LOMAS DE SAN SEBASTIÁN;CAMINO DEL AMANECER 937 DEPTO 502; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+55;ELISA;;PARQUE RES LAGUNA GRANDE;TOLEDO 52; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+56;ELSA LAVIN;;PARQUE RES LAGUNA GRANDE;CORDOBA 1920; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+57;EMILIO GIDI;V;HUERTOS FAMILIARES;LAS ROSAS; -   ;;1;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 38,657 ; $ 29,670 ; $ 8,987 
+58;ENRIQUE GUZMAN;;ANDALUE;NAHUELBUTA 1720 DEPTO 66  ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+59;ERIKA;;ANDALUE;CONDOMINIO CLARO BOSQUE CASA 5 ANDALÚE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+60;ERIKA AMIGA KATY;;CASA;DEJAR EN CASA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+61;ERNESTO PARODI;;CASA;CASA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+62;FABIANA;;LONCOPARQUE;LEUFU 14; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+63;FABIOLA MATUS;;HUERTOS FAMILIARES;LAS VIOLETAS 1521 DEPTO 17 C; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+64;FERNANDA BERNAL;;ANDALUE;AVDA. NAHUELBUTA 2580 CASA 5 CONDOMINIO ANTILCO ANDALUÉ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+65;FERNANDA IRRIBARRA;;LOMAS DE SAN SEBASTIÁN;RAMÓN CARRASCO 239 CASA 209 ANTILHUE CONCEPCIÓN; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+66;FERNANDO FROSINI;;ANDALUE;QUINEL ORIENTE 2506; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+67;FRANCISCO BRITO;;LOMAS DE SAN SEBASTIAN;FRANCISCO DE ASIS 142; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+68;FRANCISCO NUALART;;LONCOPARQUE;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+69;FREDDY JELVES;;HUERTOS FAMILIARES;LAS ROSAS 1935 DEPTO 103 A; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+70;FRESIA MATAMALA;;VALLE NOBLE;ALAVA 134; 1 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,980 ; $ 15,000 ; $ 6,980 
+71;GABI CERDA;;CASINO;CALLE G N° 1099 CASA ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+72;GABRIEL;;EL VENADO;EL VENADO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+73;GABRIEL COLLAO;V;LOMAS DE SAN ANDRES;; -   ;;;;;;2;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,576 ; $ 18,000 ; $ 3,576 
+74;GABRIEL MORENO;;CONCEPCION;SALAS 53 DEPTO 904 ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+75;GABRIEL SAEZ;;SAN PEDRO;ENRIQUE MOYA 201; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+76;GABRIELA GEBAUER;;ANDALUE;AVENIDA ANDALUE 2736 DPTO 31 A; -   ;1;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 24,975 ; $ 18,250 ; $ 6,725 
+77;GASTÓN ALARCÓN;;SAN PEDRO;AVDA. LAGUNA GRANDE 625 CASA 19 SAN PEDRO DE LA PAZ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+78;GASTON HERNANDEZ;;PEDRO DE VALDIVIA;PEDRO DE VALDIVIA 787 DEPTO 302; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+79;GENOVEVA QUIRÓZ;;HUERTOS FAMILIARES;LAS ROSAS 1852 CASA 8 HUERTOS FAMILIARES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+80;GERHARD SCHWEINITZ;;CHIGUAYANTE;CAMINO A CHIGUAYANTE 5615 DEPTO. 104 ENTRADA DEL PINARES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+81;GINO GIAMBÓ;;ANDALUE;AVDA. ANDALUÉ # 2638 - CASA 11 MISMO CONDOMINIO CHRISTIAN; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+82;GLORIA CRUCES;;PARQUE RES LAGUNA GRANDE;BADAJOS 1969; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+83;GLORIA MUÑOZ;;LONCOPARQUE;NAHUELBUTA 3956; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+84;GONZALO BERMUDEZ;;SAN PEDRO;AINOHA 1806 BAYONA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+85;GUILLERMO GAJARDO;;;AVENIDA SAN ANDRES ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+86;GUSTAVO BIRKE;;EL VENADO;EL VENADO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+87;HERMES MESA;;CASA;; -   ;;;1;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 19,980 ; $ 15,000 ; $ 4,980 
+88;HILDA;;HUERTOS FAMILIARES;LOS PENSAMIENTOS 435 CASA 423; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+89;INGRID;;TALCAHUANO;SAN MARTIN 518 B CERRO DAVID FUENTES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+90;INGRID SAEZ;J;CASA;; 1 ;1;1;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 85,612 ; $ 62,920 ; $ 22,692 
+91;ISABEL;;PARQUE RES LAGUNA GRANDE;LINARES 1975; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+92;JACQUELINE RUDOLPHI;V;LONCO ORIENTE;PASCUAL BINIMELIS 59 B; 2 ;;1;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 82,617 ; $ 59,670 ; $ 22,947 
+93;JAIME NEIRA;;LOMAS DE SAN SEBASTIÁN;PORTAL DE LA TARDE 1333; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+94;JAVIER ALARCON;V;LOMAS DE SAN ANDRES;; 1 ;;1;;;;2;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 82,213 ; $ 62,670 ; $ 19,543 
+95;JAVIER GAMBOA;;PEDRO DE VALDIVIA;PEDRO DE VALDIVIA 1653 DEPTO 14; 2 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 43,960 ; $ 30,000 ; $ 13,960 
+96;JAVIER ROSAS;;CASINO;CALLE 8 CASA 6194; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+97;JAVIERA DÍAZ;;LONCOPARQUE;MILLAHUE 29 LONCO PARQUE CHIGUAYANTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+98;JENNY RODRIGUEZ;;SAN PEDRO;BAYONA 2050 SAN PEDRO DE LA PAZ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+99;JERINA REYES;;CASA;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+100;JORGE FUENTEALBA;;ANDALUE;AVDA. ANDALUÉ # 2638 - CASA 5 MISMO CONDOMINIO CHRISTIAN; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+101;JORGE WELDT;;TALCAHUANO;CASETA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+102;JOSE MANUEL  OXLEY;;TALCAHUANO;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+103;JOSE SANDOVAL;;TALCAHUANO;GOBERNACION MARITIMA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+104;JUAN CARLOS ESCOBAR;;CHIGUAYANTE;CALLE UNO, CASA 459, VILLA MIRADOR DEL RÍO, CHIGUAYANTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+105;JUAN CARLOS OÑATE;;CONCEPCION;PASAJE 1 CASA 195 LORENZO ARENAS 2; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+106;JUAN MORALES;;CASA;LOS ABEDULES SUR 365, LOMAS COLORADAS; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+107;JUAN PABLO BURGOS;;CHIGUAYANTE;PAICAVI 275; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+108;JUAN PRLG;;PARQUE RES LAGUNA GRANDE;CADIZ 1919; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+109;JULIO PARRA;;HUERTOS FAMILIARES;LAS VIOLETAS 1678 CASA 9; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+110;JULIO ZAPATA;;HUERTOS FAMILIARES;LAS ROSAS 1785 CASA 20 HUERTOS FAMILIARES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+111;KARIN RIEDEL;;EL VENADO;WILLIAM O'REILLY 3132 EL VENADO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+112;KARINA;;CONCEPCION;ONGOLMO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+113;KARINA LOPEZ;V;LOMAS DE SAN ANDRES;; -   ;;;;;;1;;1;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 17,588 ; $ 14,300 ; $ 3,288 
+114;KARINA RACH;;SANTA JUANA;RÍO ÑUBLE 2639 EL RECODO SAN PEDRO DE LA PAZ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+115;KARLA MESINA;;PARQUE RES LAGUNA GRANDE;ALICANTE 58; -   ;1;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 24,975 ; $ 18,250 ; $ 6,725 
+116;KATY;;ANDALUE;MALEN PONIENTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+117;LAURA SAEZ;;ANDALUE;AVENIDA ANDALUE; 2 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 43,960 ; $ 30,000 ; $ 13,960 
+118;LELIO HORMAZABAL;;HUERTOS FAMILIARES;LOS PENSAMIENTOS 280 CASA 13; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+119;LEONARDO GAJARDO;;CASA;CASA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+120;LESLIE DIAZ;;TALCAHUANO;MICHIMALONGO 2899 POB. ALMIRANTE NEF, CASA 30 ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+121;LESLIE SMITH;V;VILUMANQUE;PASAJE 1 N°4871 ; -   ;;;;;;;;1;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 6,800 ; $ 5,300 ; $ 1,500 
+122;LETIZZIA VECCHI;;BELLAVISTA;AVENIDA TORREONES OESTE 2066; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+123;LEYLA SAEZ;;HUERTOS FAMILIARES;FRAY PEDRO SUBERCASEAUX 343 HUERTOS FAMILIARES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+124;LOREDANA;;EL VENADO;EL VENADO; -   ;;1;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 38,657 ; $ 29,670 ; $ 8,987 
+125;LORETO LAZO;;ANDALUE;NAHUELBUTA 1800 CASA 24 CONDOMINIO RUCAHUE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+126;LORETO TESORERO;;SANTA JUANA;ERNESTO PINTO LAGARRIGUE 1292, CAMINO A SAN JUANA KM. 1.2 ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+127;LUIGI GOTUZZO;;TALCAHUANO;BERGANTIN ARAUCANO 18 POBLACIÓN BANNEN ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+128;LUIS PEREZ;;LONCOPARQUE;LLANCURA 70; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+129;LULA;;ANDALUE;CAMINO AL VENADO 585 DEPTO 302 LE BLANC; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+130;LUZ MANNAERTS;;VILLUCO;VÍA DEL RÍO 3825 DEPTO. 203 EDIFICIO CONDE DE PEDROZA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+131;MACARENA ZIRPEL;;ANDALUE;PUCARA ORIENTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+132;MAGGY ROMERO;;TALCAHUANO;CORVETA INDEPENDENCIA CASA 12 POB. YOUNG; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+133;MAILY;;EL VENADO;DOUGLAS MONKS 3232 EL VENADO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+134;MAITE IÑAKI;;ANDALUE;BUREO 2378 ANDALUÉ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+135;MARCELA AHUMADA;;PARQUE RES LAGUNA GRANDE;VALENCIA 1967; 1 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,980 ; $ 15,000 ; $ 6,980 
+136;MARCELA FERNANDEZ;;ANDALUE;AVDA NAHUELBUTA 2450 CASA 11; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+137;MARCELA VERDUGO;;ANDALUE;PUCARA ORIENTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+138;MARCELO BANCALARI;;LONCO;EL COMENDADOR 2822 LONCO NORTE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+139;MARCELO SAEZ;;SAN PEDRO;AINOHA 1806 BAYONA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+140;MARCOS RIQUELME;;ANDALUE;AVDA. NAHUELBUTA 1800 CASA 35 PENINSULA ANDALUÉ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+141;MARÍA EUGENIA;;ANDALUE;CONDOMINIO CLARO BOSQUE CASA 13 ANDALÚE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+142;MARÍA EUGENIA;;HUERTOS FAMILIARES;LAS MARGARITAS 1884 CASA 6 HUERTOS FAMILIARES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+143;MARIA JOSE LAGOS;;ANDALUE;LAFQUEN 1120; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+144;MARIA LOZANO;;HUERTOS FAMILIARES;VIOLETA PARRA  ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+145;MARIA LUISA SOLAR;;EL VENADO;WILLIAM CONDON 3034; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+146;MARIBEL;;ANDALUE;BUREO 2331 ANDALUÉ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+147;MARISA BORDAGARAY;;CHIGUAYANTE;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+148;MARISOL;;HUERTOS FAMILIARES;LAS VIOLETAS 1751 CASA 6 HUERTOS FAMILIARES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+149;MARISOL CACERES;;LOMAS DE SAN ANDRÉS;MARIN DE POVEDA 123  DETRÁS EDIFICIO CONCEPCIÓN; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+150;MAUREEN;;ANDALUE;MALEN SUR 2561 ANDALUÉ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+151;MAURICIO AGUILERA;;PARQUE RES LAGUNA GRANDE;SEVILLA 1935; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+152;MAURICIO ALVAREZ;;LOMAS DE SAN ANDRÉS;GARCIA HURTADO DE MENDOZA 430 A; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+153;MAURICIO GARRIDO;;CASA;CASA; -   ;;;;;;1;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 10,788 ; $ 9,000 ; $ 1,788 
+154;MAURICIO MUÑOZ;;ANDALUE;BUREO ORIENTE 2397 ANDALUÉ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+155;MAXIMILIANO NUÑEZ;;HUALPÉN;CHAITEN 8024 HUALPÉN; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+156;MILEN GUZMAN;;ANDALUE;LOS CANELOS 751 CASA C; -   ;;;;;;;;1;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 6,800 ; $ 5,300 ; $ 1,500 
+157;MIRIAM GARRIDO;;PARQUE RES LAGUNA GRANDE;MERIDA 1953; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+158;MIRTHA PARES;;CONCEPCION;EDIFICIO AMANECER; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+159;NATALIA ALFARO;;ANDALUE;COIGÜE 2284 ANDALUÉ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+160;NICOLAS AGUAYO;;CONCEPCION;COLLAO 750 DEPTO 701 MIRADOR DE COLLAO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+161;NILDA;;PARQUE RES LAGUNA GRANDE;IBIZA 63; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+162;OLGA BENITEZ;;ANDALUE;EL COIHUE 2304; 1 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,980 ; $ 15,000 ; $ 6,980 
+163;OMAR GUTIERREZ;;CASA;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+164;ORLANDO ALARCON;;CASA;DEJAR EN CASA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+165;OSCAR GALLARDO;;CASA;CASA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+166;OSCAR GONZÁLEZ;;ANDALUE;CALICÁN ORIENTE 2200; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+167;PABLO CAMBIASO;;CONCEPCION;MAIPU CON PRAT CONCEPCIÓN; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+168;PABLO SOTO;;HUERTOS FAMILIARES;LAS MARGARITAS 1455 DEPTO. H301 EDIFICIO HUERTO PARQUE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+169;PABLO VALLEJOS;;CASA;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+170;PAMELA;;PARQUE RES LAGUNA GRANDE;MURCIA 1928; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+171;PAMELA MONJE;;EL VENADO;AVDA. JOHN MACNAB 3460 CONDOMINIO GALES CASA 11 EL VENADO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+172;PAOLA FLORES;;ANDALUE;MALEN PONIENTE; 1 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,980 ; $ 15,000 ; $ 6,980 
+173;PAOLA VERGARA;;PEDRO DE VALDIVIA;AVDA. SANHUEZA 1634-C; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+174;PATRICIA MEDINA;;SAN PEDRO;PASAJE DORA PUELMA 229 ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+175;PATRICIO NEIRA;;CASA;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+176;PAULA ;;ANDALUE;PUCARA PONIENTE 2198; 1 ;;;;;;;;1;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 28,780 ; $ 20,300 ; $ 8,480 
+177;PAULA DELGADO;;HUERTOS FAMILIARES;LAS ROSAS 1617 CASA 17; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+178;PAULA FERNANDEZ;;PARQUE RES LAGUNA GRANDE;BAJADOS 1977; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+179;PAULA PINEDO;;SAN PEDRO;PJE JUAN GOMEZ DE VIDAURRE 13 VILLA SAN PEDRO; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+180;PAULINA GARCÍA;;ANDALUE;MAQUEHUA ORIENTE 1957 ANDALÚE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+181;PAULINA MUÑOZ;V;CASA;; 1 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,980 ; $ 15,000 ; $ 6,980 
+182;PEDRO BETANZO;;CONCEPCION;LASTARRIA 1014 PEDRO DEL RIO ZAÑARTU; 1 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 21,980 ; $ 15,000 ; $ 6,980 
+183;RAFAEL SPENCER;;CASA;CASA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+184;RAÚL SANTANA;;TALCAHUANO;TEMU 418 VEGAS DE PERALES ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+185;RICARDO KEARSLY;;PARQUE RES LAGUNA GRANDE;IBIZA 55; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+186;ROBERTO SALDIVAR;;TALCAHUANO;FRAGATA MARÍA ISABEL 176 POB. YOUNG; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+187;ROBERTO WOHL;;ANDALUE;VILLARRICA 1530 CASA 25 CONDOMINIO CORDILLERA; 1 ;;;;;;1;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 32,768 ; $ 24,000 ; $ 8,768 
+188;RODRIGO ALVIÑA;;ANDALUE;AVDA. ANDALUÉ 21881 LA LADO DEL SANTÍSIMA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+189;RODRIGO CARREÑO;;CUMBRES ANDALUE;FUTALEUFU 1150; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+190;RODRIGO JARPA;;ANDALUE;VILLARRICA ; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+191;RODRIGO VELASQUEZ;V;HUERTOS FAMILIARES;LAS MARGARITAR 1616 CASA 3 CONDOMINIO FERNANDO DE ARAGON ; -   ;;1;1;;;1;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 69,425 ; $ 53,670 ; $ 15,755 
+192;RODRIGO YAÑEZ;;CASINO;PASAJE 18 CASA 547 BRISAS DEL SOL; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+193;ROXANA CONTRERAS;;SAN PEDRO;AINOHA 1806 BAYONA; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+194;ROXANNA;;HUERTOS FAMILIARES;LAS ROSAS 1800 LOMBARDIA CASA 14; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+195;ROXANNA GARCIA;;CASA;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+196;SANDRA CASTRO;;EL VENADO;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+197;SILVANA;;TALCAHUANO;LAUTARO 103 POB YOUNG; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+198;SILVIA JAURE;;SAN PEDRO;LOS CISNES 940 CASA 32 CONDOMINIO LOS BOLDOS SAN PEDRO DEL VALLE; 2 ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 43,960 ; $ 30,000 ; $ 13,960 
+199;SOFIA;;EL VENADO;JOHN MACNAB 3650 CASA 26; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+200;SOFIE DE CUIPER;;LONCOPARQUE;NAHUELBUTA 3772; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+201;SORAYA;;EL VENADO;FRANSICO MEZTNER 3264; -   ;;;;;;;;2;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 13,600 ; $ 10,600 ; $ 3,000 
+202;SUSANA ROA;;HUERTOS FAMILIARES;LAS MARGARITAS 1415 EDIFICIO RUPANCO HUERTOS FAMILIARES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+203;TERE ROJAS;;SAN PEDRO;AVDA. LAGUNA GRANDE 533 CONDOMINIO LOS LLEUQUES; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+204;THOMAS KLISCHIES;;LOMAS DE SAN ANDRÉS;AVDA SAN ANDRES 225 CASA B; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+205;VERONICA CARRERA;;SAN PEDRO;BAYONA 1900 VISTAS  A; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+206;VERONICA VALENZUELA;;LONCOPARQUE;CAIQUEN 42; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+207;VICENTE PEREIRA;;ANDALUE;AVENIDA ANDALUE; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+208;XIMENA;;CASA;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+209;XIMENA CASTILLO;;LONCOPARQUE;CAIQUEN 29 SIN NUMERO (2DA CASA LADO IZQ.); -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+210;ZULEMA;;EL VENADO;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+211;ANTONIA VARELA;;;; -   ;1;;;;;;;2;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ 38,575 ; $ 28,850 ; $ 9,725 
+212;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+213;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+214;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+215;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+216;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+217;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+218;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+219;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+220;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+221;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+222;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
+223;;;;; -   ;;;;;;;;;2;2.5;4.3;2;2.5;4.2;1.2;1;1; $ -   ; $ -   ; $ -   
