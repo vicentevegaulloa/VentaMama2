@@ -9,25 +9,30 @@
 <table class="table">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Cliente</th>
-      <th>Productos</th>
-      <th>Eliminar</th>
-      <th>Editar</th>
+      <th><%= link_to "ID", :sort => "id"%></th>
+      <th><%= link_to "Cliente", :sort => ""%></th>
+      <th><%= link_to "Estado", :sort => %></th>
+      <th><%= link_to "Fecha", :sort => %></th>
+      <th><%= link_to "Total", :sort => %></th>
+      <th><%= link_to "Opciones", :sort => %></th>
     </tr>
   </thead>
   <tbody>
     <% @sales.each do |venta|%>
     <tr>
       <th><%= link_to venta.id, sale_path(venta.id)%></th>
-      <td><%= link_to venta.client.name , client_path(venta.client.id)%></td>
+      <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%></td>
       <td>
-    <% venta.sale_products.each do |sp| %>
-    <%= sp.product.name %>(<%= sp.cantidad %>)<br>
-    <% end %>
+        <%= State.find(venta.sale_states.order("updated_at DESC").first.state_id).name %>
       </td>
-      <td><%= link_to "Delete", sale_path(venta.id), method: :delete %></td>
-      <td><%= link_to "Edit", edit_sale_path(venta.id)%></td>
+      <td>
+        <%= venta.sale_states.maximum("updated_at").strftime("%d-%m-%Y") %>
+      </td>
+      <td>$<%= venta.total %></td>
+      <td>
+        <%= link_to "Edit", edit_sale_path(venta.id)%> |
+        <%= link_to "Delete", sale_path(venta.id), method: :delete %>
+      </td>
     </tr>
     <% end %>
   </tbody>

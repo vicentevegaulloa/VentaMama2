@@ -68,7 +68,7 @@ Client.all.each do |c|
         real_weight: rand((sp.product.estimated_weight * 0.75)..(sp.product.estimated_weight * 1.25))
       )
     end
-    for i in 1..rand(2..num_states)
+    for i in 1..rand(1..num_states)
       puts "State: #{i}"
       s.states << State.find(i)
     end
