@@ -1,4 +1,4 @@
-<h1>Ventas</h1><br><br>
+<h1>Search Results</h1><br><br>
 <%= link_to "Crear Venta", new_sale_path %><br>
 <%= link_to "Nuevo Periodo de Venta", new_sale_period_path %><br>
 <%= link_to "Ver Periodos de Venta", sale_periods_path %>
@@ -6,6 +6,7 @@
 <div id="new-search">
   <%= link_to 'Filtrar', new_search_path, remote: true %>
 </div>
+
 <div class="container">
   <div class="columns is-centered is-vcentered">
     <div class="column is-narrow has-text-centered">
@@ -21,7 +22,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @sales.each do |venta|%>
+    <% @search.sales.each do |venta|%>
     <tr>
       <th><%= link_to venta.id, sale_path(venta.id)%></th>
       <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%></td>

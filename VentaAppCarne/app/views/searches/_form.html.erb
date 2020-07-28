@@ -1,0 +1,19 @@
+<%= form_with(model: search, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :client_id %><br />
+    <%= f.collection_select :client_id, Client.order(:name), :id, :name, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :updated_open, "Date Range" %><br />
+    <%= f.date_field :updated_open, value: f.object.try(:strftime,"%m/%d/%Y")%> -
+    <%= f.date_field :updated_close, value: f.object.try(:strftime,"%m/%d/%Y")%>
+  </div>
+
+  <div class="field">
+    <%= f.label :products %><br />
+    <%= f.collection_select :products, Client.order(:name), :id, :name, include_blank: true %>
+  </div>
+
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :sale_periods
   resources :sales
   resources :products
+  resources :searches
   resources :clients do
     resources :directions
   end

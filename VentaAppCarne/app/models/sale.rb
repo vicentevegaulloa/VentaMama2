@@ -14,4 +14,14 @@ class Sale < ApplicationRecord
     end
     return total
   end
+
+  def self.search(search)
+    if search
+      self.where(id: search.to_i)
+    else
+      Sale.all
+    end
+  end
+
+
 end

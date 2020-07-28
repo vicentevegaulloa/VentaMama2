@@ -1,7 +1,7 @@
 class SalesController < ApplicationController
   before_action :set_sale, only: [:show, :edit, :update, :destroy]
   def index
-    @sales = Sale.all
+    @sales = Sale.search(params[:search])
   end
 
   def new
@@ -13,7 +13,7 @@ class SalesController < ApplicationController
   def create
     @sale = Sale.new(sale_params)
     @sale.save
-    redirect_to sales_path
+    redirect_to search_path(1)
   end
 
   def show
@@ -26,7 +26,7 @@ class SalesController < ApplicationController
 
   def update
     if @sale.update_attributes(sale_params)
-      redirect_to sales_path
+      redirect_to search_path(1)
     else
       redirect_to edit_sale_path(@sale)
     end
@@ -34,7 +34,7 @@ class SalesController < ApplicationController
 
   def destroy
     @sale.destroy
-    redirect_to sales_path
+    redirect_to search_path(1)
   end
 
   def set_sale
@@ -45,6 +45,7 @@ class SalesController < ApplicationController
   def sale_params
     params.require(:sale).permit(
       :client_id,
+      :search,
       sale_states_attributes:
         [
           :id,

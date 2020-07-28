@@ -74,3 +74,10 @@ Client.all.each do |c|
     end
   end
 end
+
+Search.create!(
+  client_id: nil,
+  updated_open: nil,
+  updated_close: nil,
+  products: nil
+)
