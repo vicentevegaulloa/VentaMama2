@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_id: 
+  updated_open: 2020-07-27 19:38:22
+  updated_close: 2020-07-27 19:38:22
+  products: MyString
+
+two:
+  client_id: 
+  updated_open: 2020-07-27 19:38:22
+  updated_close: 2020-07-27 19:38:22
+  products: MyString

@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'cocoon'
 gem 'jquery-rails'
+# gem 'ransack'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
