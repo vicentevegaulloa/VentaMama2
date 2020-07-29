@@ -8,6 +8,7 @@
 
 require 'csv'
 
+
 productos = CSV.read(Rails.root.join("lib/assets/seed/productos.csv"), :headers=>true, :col_sep => ";")
 clientes = CSV.read(Rails.root.join("lib/assets/seed/clientes.csv"), :headers=>true, :col_sep => ";")
 
@@ -71,6 +72,14 @@ Client.all.each do |c|
     for i in 1..rand(1..num_states)
       puts "State: #{i}"
       s.states << State.find(i)
+      day = rand(((i - 1) * 5 + 1)..((i * 5)))
+      time = "2020-07-#{day}"
+      st = s.sale_states.find_by(state_id: i)
+      puts time
+      st.updated_at = time
+      puts st.updated_at
+      st.save(touch: false)
+      puts st.updated_at
     end
   end
 end

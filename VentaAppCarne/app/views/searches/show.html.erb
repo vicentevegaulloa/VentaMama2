@@ -6,7 +6,6 @@
 <div id="new-search">
   <%= link_to 'Filtrar', new_search_path, remote: true %>
 </div>
-
 <div class="container">
   <div class="columns is-centered is-vcentered">
     <div class="column is-narrow has-text-centered">
@@ -30,7 +29,7 @@
         <%= State.find(venta.sale_states.order("updated_at DESC").first.state_id).name %>
       </td>
       <td>
-        <%= venta.sale_states.maximum("updated_at").strftime("%d-%m-%Y") %>
+        <%= SaleState.find_by(state_id: venta.sale_states.maximum("state_id"), sale_id: venta.id).updated_at.strftime("%d-%m-%Y") %>
       </td>
       <td>$<%= venta.total %></td>
       <td>

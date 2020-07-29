@@ -11,9 +11,29 @@
   </div>
 
   <div class="field">
-    <%= f.label :products %><br />
-    <%= f.collection_select :products, Client.order(:name), :id, :name, include_blank: true %>
+    <%= f.label :total_min, "Total Price Range" %><br />
+    <%= f.number_field :total_min%> -
+    <%= f.number_field :total_max%>
   </div>
 
+  <p>Productos</p>
+  <% Product.all.each do |p| %>
+  <div class="field">
+    <%= check_box_tag 'search[products][]', p.id.to_i %>
+    <%= p.name %>
+  </div>
+  <% end %>
+
+  <p>Estados</p>
+  <% State.all.each do |p| %>
+  <div class="field">
+    <%= check_box_tag 'search[states][]', p.id.to_i %>
+    <%= p.name %>
+  </div>
+  <% end %>
+
+
+  <%= select_tag('search[order]', options_for_select([['Cliente', 'cliente'], ['Estado', 'estado'], ['Fecha', 'fecha'], ['Total', 'total']])) %>
   <div class="actions"><%= f.submit "Search" %></div>
+
 <% end %>
