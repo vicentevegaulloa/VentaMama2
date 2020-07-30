@@ -1,39 +1,105 @@
+
 <%= form_with(model: search, local: true) do |f| %>
-  <div class="field">
-    <%= f.label :client_id %><br />
-    <%= f.collection_select :client_id, Client.order(:name), :id, :name, include_blank: true %>
+<h1>Filtrar</h1>
+<div class="container form-container">
+  <div class="field is-horizontal">
+    <div class="field-box">
+      <div class="field-label is-normal">
+        <label class="label">Cliente</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <div class="select is-fullwidth">
+              <%= f.collection_select :client_id, Client.order(:name), :id, :name, include_blank: true %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field-box">
+      <div class="field-label is-normal">
+        <label class="label">Fecha</label>
+      </div>
+        <div class="control">
+          <%= f.date_field :updated_open, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'input' %>
+        </div>
+          &nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;
+        <div class="control">
+            <%= f.date_field :updated_close, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'input' %>
+        </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :updated_open, "Date Range" %><br />
-    <%= f.date_field :updated_open, value: f.object.try(:strftime,"%m/%d/%Y")%> -
-    <%= f.date_field :updated_close, value: f.object.try(:strftime,"%m/%d/%Y")%>
-  </div>
 
-  <div class="field">
-    <%= f.label :total_min, "Total Price Range" %><br />
-    <%= f.number_field :total_min%> -
-    <%= f.number_field :total_max%>
-  </div>
-
-  <p>Productos</p>
-  <% Product.all.each do |p| %>
-  <div class="field">
-    <%= check_box_tag 'search[products][]', p.id.to_i %>
-    <%= p.name %>
-  </div>
-  <% end %>
-
-  <p>Estados</p>
-  <% State.all.each do |p| %>
-  <div class="field">
-    <%= check_box_tag 'search[states][]', p.id.to_i %>
-    <%= p.name %>
-  </div>
-  <% end %>
+  <div class="field is-horizontal">
+    <div class="field-box">
+      <div class="field-label is-normal">
+        <label class="label">Monto Total</label>
+      </div>
+      <div class="control">
+        <%= f.number_field :total_min, class: 'input' %>
+      </div>
+        &nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;
+      <div class="control">
+          <%= f.number_field :total_max, class: 'input' %>
+      </div>
+    </div>
 
 
-  <%= select_tag('search[order]', options_for_select([['Cliente', 'cliente'], ['Estado', 'estado'], ['Fecha', 'fecha'], ['Total', 'total']])) %>
-  <div class="actions"><%= f.submit "Search" %></div>
+    <div class="field-box">
+      <div class="field-label is-normal">
+        <label class="label">Estados</label>
+      </div>
+      <% State.all.each do |p| %>
+      <label class="checkbox">
+        <%= check_box_tag 'search[states][]', p.id.to_i %>
+        <%= p.name %>&nbsp;&nbsp;
+      </label>
+
+    <% end %>
+    </div>
+
+    </div>
+
+    <div class="field is-horizontal">
+    <div class="field-box">
+      <div class="field-label is-normal">
+        <label class="label">Productos</label>
+      </div><br>
+      <% Product.joins("INNER JOIN (#{Product.select("MAX(id) AS max_id").group(:name).to_sql}) AS updated ON updated.max_id=products.id").each do |p| %>
+      <label class="checkbox">
+        <%= check_box_tag 'search[products][]', p.id.to_i %>
+        <%= p.name %>
+      </label>
+      <% end %>
+    </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-box">
+        <div class="field-label is-normal">
+          <label class="label">Ordenar por</label>
+        </div>
+        <div class="field-body">
+          <div class="field is-narrow">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <%= select_tag('search[order]', options_for_select([['Cliente', 'cliente'], ['Estado', 'estado'], ['Fecha', 'fecha'], ['Total', 'total']])) %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="control" style="align-items: center;">
+        <%= f.submit "Search", class: "button is-primary" %>
+      </div>
+
+
+
+</div>
+
 
 <% end %>

@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   def index
-      @products = Product.all
+      subquery = Product.select("MAX(id) AS max_id").group(:name).to_sql
+      @products = Product.joins("INNER JOIN (#{subquery}) AS updated ON updated.max_id=products.id")
     end
 
     def new

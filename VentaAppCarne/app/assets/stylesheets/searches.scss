@@ -1,3 +1,43 @@
 // Place all the styles related to the searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sales-table {
+  width: 100%
+}
+
+#box_columns {
+  display: flex;
+  flex-direction: row; // this is default
+  align-items: stretch;
+}
+
+#box_columns .box{
+  height: 100%
+}
+
+tr.hidden-row {
+  display: none;
+}
+
+.field-box {
+  display: flex;
+  border: solid;
+  border-radius: 5px;
+  border-width: thin;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  border-color: #dbdbdb;
+}
+.container.form-container {
+  background-color: #3298dc17;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+//
+// tr.normal-sale-row:hover + tr.hidden-row {
+//   display: table-row;
+// }
