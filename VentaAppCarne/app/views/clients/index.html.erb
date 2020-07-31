@@ -9,8 +9,8 @@
     <tr>
       <th>ID</th>
       <th>Nombre</th>
-      <th>Eliminar</th>
-      <th>Editar</th>
+      <th>Deuda</th>
+      <th>Opciones</th>
     </tr>
   </thead>
   <tbody>
@@ -18,8 +18,12 @@
     <tr>
       <th><%= cliente.id%></th>
       <td><%= link_to cliente.name, client_path(cliente.id)%></td>
-      <td><%= link_to "Delete", client_path(cliente.id), data: {method: :delete} %></td>
-      <td><%= link_to "Edit", edit_client_path(cliente.id) %></td>
+      <% if cliente.deuda > 0 %>
+        <td><span class="deuda">$<%= cliente.deuda%></span></td>
+      <% else %>
+        <td>-</td>
+      <% end %>
+      <td><%= link_to "Editar", edit_client_path(cliente.id) %> | <%= link_to "Eliminar", client_path(cliente.id), data: {method: :delete} %></td>
     </tr>
     <% end %>
   </tbody>

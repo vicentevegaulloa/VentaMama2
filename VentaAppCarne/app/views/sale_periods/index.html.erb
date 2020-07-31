@@ -23,8 +23,8 @@
       <th><%= sp.id%></th>
       <td><%= sp.start%></td>
       <td><%= sp.end %></td>
-      <td><%= link_to "Delete", sale_period_path(sp.id), data: {method: :delete} %></td>
-      <td><%= link_to "Edit", edit_sale_period_path(sp.id) %></td>
+      <td><%= link_to "Eliminar", sale_period_path(sp.id), data: {method: :delete} %></td>
+      <td><%= link_to "Editar", edit_sale_period_path(sp.id) %></td>
 
     </tr>
     <% end %>

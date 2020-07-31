@@ -21,8 +21,8 @@
     <tr>
       <th><%= producto.id%></th>
       <td><%= link_to producto.name, product_path(producto.id)%></td>
-      <td><%= link_to "Delete", product_path(producto.id), data: {method: :delete} %></td>
-      <td><%= link_to "Edit", edit_product_path(producto.id) %></td>
+      <td><%= link_to "Eliminar", product_path(producto.id), data: {method: :delete} %></td>
+      <td><%= link_to "Editar", edit_product_path(producto.id) %></td>
       <td><%= link_to "Actualiza", new_product_path(:base_id => producto.id) %></td>
     </tr>
     <% end %>

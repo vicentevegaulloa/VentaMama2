@@ -1,11 +1,13 @@
 <div class="nested-fields">
-  <%= link_to_remove_association "Remove Product", f %>
-<%= f.label :product_id %>
-<%= f.collection_select(:product_id, Product.all, :id, :name, prompt: true) %>
+  <%= link_to_remove_association "Quitar Producto", f %> <br>
+<%= f.label :product_id, "Producto" %>
+<% subquery = Product.select("MAX(id) AS max_id").group(:name).to_sql %>
+<%= f.collection_select(:product_id, Product.joins("INNER JOIN (#{subquery}) AS updated ON updated.max_id=products.id"), :id, :name, prompt: true) %>
 <br>
-<%= f.label :cantidad %>
+<%= f.label :cantidad, "Cantidad: " %>
 <%= f.number_field :cantidad, min:1 %>
 <br>
-<%= f.label :real_weight %>
+<%= f.label :real_weight, "Peso Real: " %>
 <%= f.number_field :real_weight, min:1 %>
 </div>
+<br><br>

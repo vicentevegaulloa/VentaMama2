@@ -2,7 +2,7 @@ class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
   before_action :set_direction, only: [:show, :edit]
   def index
-      @clientes = Client.all
+      @clientes = Client.order(:name)
     end
 
     def new
@@ -51,10 +51,6 @@ class ClientsController < ApplicationController
           :id,
           :sector,
           :street,
-          :muni_n,
-          :comuna,
-          :unidad,
-          :n_unidad,
           :_destroy
           ])
   end

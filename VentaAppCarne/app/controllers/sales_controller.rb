@@ -6,14 +6,22 @@ class SalesController < ApplicationController
 
   def new
     @sale = Sale.new
-    @sale.sale_states.new
     @sale.sale_products.new
   end
 
   def create
     @sale = Sale.new(sale_params)
-    @sale.save
-    redirect_to search_path(1)
+    if @sale.valid?
+      @sale.save
+      (1..params[:state].to_i).each do |i|
+        @sale.states << State.find(i)
+        puts i
+      end
+      redirect_to search_path(1)
+    else
+      redirect_to new_sale_path
+    end
+
   end
 
   def show
@@ -26,6 +34,13 @@ class SalesController < ApplicationController
 
   def update
     if @sale.update_attributes(sale_params)
+      @sale.sale_states.where("sale_states.state_id > ?", params[:state]).delete_all
+      (1..params[:state].to_i).each do |i|
+        if not @sale.states.find(i)
+          @sale.states << State.find(i)
+        end
+      @sale.sale_states.find_by(state_id: params[:state]).update(updated_at: Time.now)
+      end
       redirect_to search_path(1)
     else
       redirect_to edit_sale_path(@sale)
@@ -46,12 +61,7 @@ class SalesController < ApplicationController
     params.require(:sale).permit(
       :client_id,
       :search,
-      sale_states_attributes:
-        [
-          :id,
-          :state_id,
-          :_destroy
-          ],
+      :state,
       sale_products_attributes:
         [
           :id,

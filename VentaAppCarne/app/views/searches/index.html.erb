@@ -1,4 +1,4 @@
-<h1>Search Results</h1><br><br>
+<h1>Ventas</h1><br><br>
 <%= link_to "Crear Venta", new_sale_path %><br>
 <%= link_to "Nuevo Periodo de Venta", new_sale_period_path %><br>
 <%= link_to "Ver Periodos de Venta", sale_periods_path %>
@@ -34,8 +34,8 @@
       </td>
       <td>$<%= venta.total %></td>
       <td>
-        <%= link_to "Edit", edit_sale_path(venta.id)%> |
-        <%= link_to "Delete", sale_path(venta.id), method: :delete %>
+        <%= link_to "Editar", edit_sale_path(venta.id)%> |
+        <%= link_to "Eliminar", sale_path(venta.id), method: :delete %>
       </td>
     </tr>
     <% end %>

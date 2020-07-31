@@ -54,35 +54,35 @@ productos.each do |p|
   )
 end
 
-Client.all.each do |c|
-  num_sales = rand(1..10)
-  num_states = State.all.length
-  puts "Estados: #{num_states}"
-  num_sales.times do
-    s = Sale.create!(
-      client_id: c.id
-    )
-    s.products << Product.all.sample(1 + rand(Product.all.count))
-    s.sale_products.each do |sp|
-      sp.update(
-        cantidad: rand(1..3),
-        real_weight: rand((sp.product.estimated_weight * 0.75)..(sp.product.estimated_weight * 1.25))
-      )
-    end
-    for i in 1..rand(1..num_states)
-      puts "State: #{i}"
-      s.states << State.find(i)
-      day = rand(((i - 1) * 5 + 1)..((i * 5)))
-      time = "2020-07-#{day}"
-      st = s.sale_states.find_by(state_id: i)
-      puts time
-      st.updated_at = time
-      puts st.updated_at
-      st.save(touch: false)
-      puts st.updated_at
-    end
-  end
-end
+# Client.all.each do |c|
+#   num_sales = rand(1..10)
+#   num_states = State.all.length
+#   puts "Estados: #{num_states}"
+#   num_sales.times do
+#     s = Sale.create!(
+#       client_id: c.id
+#     )
+#     s.products << Product.all.sample(1 + rand(Product.all.count))
+#     s.sale_products.each do |sp|
+#       sp.update(
+#         cantidad: rand(1..3),
+#         real_weight: rand((sp.product.estimated_weight * 0.75)..(sp.product.estimated_weight * 1.25))
+#       )
+#     end
+#     for i in 1..rand(1..num_states)
+#       puts "State: #{i}"
+#       s.states << State.find(i)
+#       day = rand(((i - 1) * 5 + 1)..((i * 5)))
+#       time = "2020-07-#{day}"
+#       st = s.sale_states.find_by(state_id: i)
+#       puts time
+#       st.updated_at = time
+#       puts st.updated_at
+#       st.save(touch: false)
+#       puts st.updated_at
+#     end
+#   end
+# end
 
 Search.create!(
   client_id: nil,

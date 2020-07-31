@@ -1,4 +1,5 @@
-<h1>Search Results</h1>
+<h1>Ventas</h1>
+<br>
 <%= link_to "Crear Venta", new_sale_path %><br>
 <div id="new-search">
   <%= link_to 'Filtrar', new_search_path, remote: true %>
@@ -22,17 +23,26 @@
     <% @search.sales.each do |venta|%>
     <tr class="normal-sale-row">
       <th><%= link_to venta.id, sale_path(venta.id)%></th>
-      <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%></td>
+      <% if venta.client.deuda > 0 %>
+        <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%> <span class="deuda">($<%= venta.client.deuda %>)</span></td>
+      <% else %>
+        <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%></td>
+      <% end %>
+
       <td>
+        <% if venta.sale_states.first %>
         <%= State.find(venta.sale_states.order("updated_at DESC").first.state_id).name %>
+        <% end %>
       </td>
       <td>
-        <%= SaleState.find_by(state_id: venta.sale_states.maximum("state_id"), sale_id: venta.id).updated_at.strftime("%d-%m-%Y") %>
+        <% if venta.sale_states.first %>
+          <%= SaleState.find_by(state_id: venta.sale_states.maximum("state_id"), sale_id: venta.id).updated_at.strftime("%d-%m-%Y") %>
+        <% end %>
       </td>
       <td>$<%= venta.total %></td>
       <td>
-        <%= link_to "Edit", edit_sale_path(venta.id)%> |
-        <%= link_to "Delete", sale_path(venta.id), method: :delete %>
+        <%= link_to "Editar", edit_sale_path(venta.id)%> |
+        <%= link_to "Eliminar", sale_path(venta.id), method: :delete %>
       </td>
     </tr>
     <tr class="hidden-row">
@@ -50,7 +60,7 @@
                         <% if Direction.find_by(client_id: venta.client.id).sector %>
                         <%= Direction.find_by(client_id: venta.client.id).sector.split.map(&:capitalize).join(' ') %><br>
                         <% else %>
-                          
+
                         <% end %>
                         <% if Direction.find_by(client_id: venta.client.id).street %>
                         <%= Direction.find_by(client_id: venta.client.id).street.split.map(&:capitalize).join(' ') %>

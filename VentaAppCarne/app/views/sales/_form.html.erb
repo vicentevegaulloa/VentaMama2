@@ -6,30 +6,28 @@
 
 
 <%= form_for @sale do |f| %>
-  <%= f.label :client_id %>
+  <%= f.label :client_id, "Cliente" %>
   <%= f.collection_select(:client_id, Client.all, :id, :name, prompt: true) %>
   <br>
-    <%= f.fields_for :sale_states do |sf|%>
-      <%= f.label :state_ids %>
-      <%= f.collection_select :state_ids, State.all, :id, :name, include_blank: true %>
-
-    <% end %>
+  <label for="state"> Estado: </label>
+  <%= select_tag "state", options_from_collection_for_select(State.all, "id", "name") %>
+  <br><br>
   <div id="sale_products">
     <%= f.fields_for :sale_products do |pf|%>
     <div class="field">
       <%= render 'sale_product_fields', f: pf %>
-      <br>
 
     </div>
 
 
     <% end %>
   </div>
+
   <div class="form-actions">
     <div class="links">
-      <%= link_to_add_association 'Add Product', f, :sale_products %>
+      <%= link_to_add_association 'Añadir Producto', f, :sale_products %>
     </div>
-    <%= f.submit %>
+    <%= f.submit "Confirmar" %>
 
 
   </div>

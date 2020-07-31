@@ -6,11 +6,13 @@ class Sale < ApplicationRecord
   has_many :sale_products, dependent: :destroy
   has_many :products, through: :sale_products
   accepts_nested_attributes_for :sale_products, :allow_destroy => true
-
+  validates :client_id, presence: true
   def total
     total = 0
     self.sale_products.each do |sp|
-      total += sp.cantidad * sp.product.unit_price
+      if sp.cantidad.present? && sp.product.unit_price.present?
+        total += (sp.cantidad) * sp.product.unit_price
+      end
     end
     return total
   end
@@ -22,6 +24,7 @@ class Sale < ApplicationRecord
       Sale.all
     end
   end
+
 
 
 end

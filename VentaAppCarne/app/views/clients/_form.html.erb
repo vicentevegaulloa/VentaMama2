@@ -6,34 +6,30 @@
 
 
 <%= form_for @client do |f| %>
-  <%= f.label :name %>
+  <%= f.label :name, "Nombre:" %>
   <%= f.text_field :name %>
   <br>
-  <%= f.label :phone %>
+  <%= f.label :phone, "Telefono:  +569" %>
   <%= f.text_field :phone %>
   <br>
-  <%= f.label :name_phone %>
+  <%= f.label :name_phone, "Nombre en Telefono:" %>
   <%= f.text_field :name_phone %>
   <br>
   <%= f.fields_for :direction_attributes do |builder|%>
-    <%= builder.label :sector %>
+    <%= builder.label :sector, "Sector" %>
+    <% if @direction.sector.present? %>
+    <%= builder.text_field :sector, value: @direction.sector %>
+    <% else %>
     <%= builder.text_field :sector %>
+    <% end %>
     <br>
-    <%= builder.label :street %>
+    <%= builder.label :street, "Calle" %>
+    <% if @direction.street.present? %>
+    <%= builder.text_field :street, value: @direction.street %>
+    <% else %>
     <%= builder.text_field :street %>
-    <br>
-    <%= builder.label :muni_n %>
-    <%= builder.text_field :muni_n %>
-    <br>
-    <%= builder.label :comuna %>
-    <%= builder.text_field :comuna %>
-    <br>
-    <%= builder.label :unidad %>
-    <%= builder.text_field :unidad %>
-    <br>
-    <%= builder.label :n_unidad %>
-    <%= builder.text_field :n_unidad %>
-    <br>
+    <% end %>
   <% end %>
-  <%= f.submit %>
+  <br>
+  <%= f.submit "Confirmar" %>
 <% end %>

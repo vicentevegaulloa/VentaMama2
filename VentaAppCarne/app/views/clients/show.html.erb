@@ -3,8 +3,8 @@
   <strong>Cliente</strong>
 </h2>
 
-<%= link_to "Edit", edit_client_path(@client.id) %> <br>
-<%= link_to "Delete", @client, data: {method: :delete} %>
+<%= link_to "Editar", edit_client_path(@client.id) %>
+<%= link_to "Eliminar", @client, data: {method: :delete} %>
 
 <div class="container">
   <div class="columns is-centered is-vcentered">
@@ -26,6 +26,15 @@
     <tr>
       <td>Nombre en Celular</td>
       <td><%= @client.name_phone %></td>
+    </tr>
+
+    <tr>
+      <td>Deuda</td>
+      <% if @client.deuda > 0 %>
+        <td><span class="deuda">$<%= @client.deuda%></span></td>
+      <% else %>
+        <td>-</td>
+      <% end %>
     </tr>
   </tbody>
 </table>
@@ -55,27 +64,6 @@
       <td><%= @direction.street %></td>
     </tr>
 
-    <tr>
-      <td>Número</td>
-      <td><%= @direction.muni_n %></td>
-    </tr>
-
-    <tr>
-      <td>Comuna</td>
-      <td><%= @direction.comuna %></td>
-    </tr>
-
-    <tr>
-      <td>Vive en</td>
-      <td><%= @direction.unidad %></td>
-    </tr>
-    <% if @direction.unidad != "Casa" %>
-    <tr>
-      <td>Num</td>
-      <td><%= @direction.n_unidad %></td>
-    </tr>
-    <% end %>
-
   </tbody>
 </table>
 
@@ -93,38 +81,103 @@
 </h2>
 <div class="container">
   <div class="columns is-centered is-vcentered">
-    <div class="column is-narrow has-text-centered">
-<table class="table">
+    <div class="column has-text-centered">
+<table class="table sales-table">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Productos</th>
-      <th>Estados</th>
-      <th>Eliminar</th>
-      <th>Editar</th>
+
+        <th><%=  "ID" %></th>
+        <th><%=  "Estado" %></th>
+        <th><%=  "Fecha" %></th>
+        <th><%=  "Total" %></th>
+        <th><%=  "Opciones" %></th>
     </tr>
   </thead>
   <tbody>
     <% @client.sales.each do |venta|%>
-    <tr>
+    <tr class="normal-sale-row">
       <th><%= link_to venta.id, sale_path(venta.id)%></th>
+
       <td>
-    <% venta.sale_products.each do |sp| %>
-    <%= sp.product.name %>(<%= sp.cantidad %>)<br>
-    <% end %>
-    </td>
-    <td>
-    <% venta.states.each do |state| %>
-    <%= state.name %><br>
-    <% end %>
+        <% if venta.sale_states.first %>
+        <%= State.find(venta.sale_states.order("updated_at DESC").first.state_id).name %>
+        <% end %>
       </td>
-      <td><%= link_to "Delete", sale_path(venta.id), method: :delete %></td>
-      <td><%= link_to "Edit", edit_sale_path(venta.id)%></td>
+      <td>
+        <% if venta.sale_states.first %>
+          <%= SaleState.find_by(state_id: venta.sale_states.maximum("state_id"), sale_id: venta.id).updated_at.strftime("%d-%m-%Y") %>
+        <% end %>
+      </td>
+      <td>$<%= venta.total %></td>
+      <td>
+        <%= link_to "Editar", edit_sale_path(venta.id)%> |
+        <%= link_to "Eliminar", sale_path(venta.id), method: :delete %>
+      </td>
+    </tr>
+    <tr class="hidden-row">
+      <td colspan="5">
+        <div class="container">
+          <div id="box_columns" class="columns is-centered is-vcentered">
+            <div class="column is-one-third has-text-centered">
+              <div class="box">
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>Estados de Venta</strong> <br>
+                      </p>
+                      <table class="table">
+                        <tbody>
+                          <% venta.sale_states.each do |st| %>
+                            <tr>
+                              <td><%= st.state.name %></td>
+                              <td><%= st.updated_at.strftime("%d-%m-%Y") %></td>
+                            </tr>
+                          <% end %>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div  class="column has-text-centered">
+              <div class="box">
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unidad</th>
+                            <th>Precio Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% venta.sale_products.each do |sp| %>
+                            <tr>
+                              <td><%= sp.product.name %></td>
+                              <td><%= sp.cantidad %></td>
+                              <td><%= sp.product.unit_price %></td>
+                              <td><%= sp.product.unit_price * sp.cantidad %></td>
+                            </tr>
+                          <% end %>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
     </tr>
     <% end %>
   </tbody>
 </table>
 </div>
-
 </div>
 </div>
