@@ -18,6 +18,6 @@ class SearchesController < ApplicationController
   end
 
   def search_params
-    params.require(:search).permit(:client_id, :updated_open, :updated_close, :order, :total_min, :total_max, :products => [], :states => [])
+    params.require(:search).permit(:client_id, :updated_open, :updated_close, :order, :total_min, :total_max, :sector, :products => [], :states => [])
   end
 end

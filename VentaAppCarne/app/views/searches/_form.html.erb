@@ -77,6 +77,22 @@
     </div>
 
     <div class="field is-horizontal">
+
+      <div class="field-box">
+        <div class="field-label is-normal">
+          <label class="label">Sector</label>
+        </div>
+        <div class="field-body">
+          <div class="field is-narrow">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <%= f.collection_select :sector, Direction.select('DISTINCT directions.sector'), :sector, :sector, include_blank: true %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="field-box">
         <div class="field-label is-normal">
           <label class="label">Ordenar por</label>

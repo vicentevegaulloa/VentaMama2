@@ -17,6 +17,13 @@ class SalesController < ApplicationController
         @sale.states << State.find(i)
         puts i
       end
+      @sale.sale_products.each do |sp|
+        if not sp.real_weight
+          sp.update(real_weight: sp.product.estimated_weight)
+        else
+          sp.update(cantidad: 1)
+        end
+      end
       redirect_to search_path(1)
     else
       redirect_to new_sale_path
@@ -36,10 +43,21 @@ class SalesController < ApplicationController
     if @sale.update_attributes(sale_params)
       @sale.sale_states.where("sale_states.state_id > ?", params[:state]).delete_all
       (1..params[:state].to_i).each do |i|
-        if not @sale.states.find(i)
+        puts "El i es: #{i} #{'-'*20}"
+        puts(@sale.states.find_by(id:i))
+        if not @sale.states.find_by(id:i)
           @sale.states << State.find(i)
+          puts State.find(i)
+          puts @sale.states
         end
+      end
       @sale.sale_states.find_by(state_id: params[:state]).update(updated_at: Time.now)
+      @sale.sale_products.each do |sp|
+        if not sp.real_weight
+          sp.update(real_weight: sp.product.estimated_weight)
+        else
+          sp.update(cantidad: 1)
+        end
       end
       redirect_to search_path(1)
     else

@@ -11,10 +11,10 @@ class Sale < ApplicationRecord
     total = 0
     self.sale_products.each do |sp|
       if sp.cantidad.present? && sp.product.unit_price.present?
-        total += (sp.cantidad) * sp.product.unit_price
+        total += (sp.cantidad) * sp.product.unit_price * sp.real_weight
       end
     end
-    return total
+    return total.round
   end
 
   def self.search(search)
