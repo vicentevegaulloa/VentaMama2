@@ -16,6 +16,13 @@
   <%= f.text_field :name_phone %>
   <br>
   <%= f.fields_for :direction_attributes do |builder|%>
+    <%= builder.label :comuna, "Comuna" %>
+    <% if @direction.comuna.present? %>
+    <%= builder.text_field :comuna, value: @direction.comuna %>
+    <% else %>
+    <%= builder.text_field :comuna %>
+    <% end %>
+    <br>
     <%= builder.label :sector, "Sector" %>
     <% if @direction.sector.present? %>
     <%= builder.text_field :sector, value: @direction.sector %>
@@ -31,5 +38,6 @@
     <% end %>
   <% end %>
   <br>
+  <%= hidden_field_tag "from", "new_sale" %>
   <%= f.submit "Confirmar" %>
 <% end %>

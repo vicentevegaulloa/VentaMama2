@@ -8,9 +8,12 @@
 <%= form_for @sale do |f| %>
   <%= f.label :client_id, "Cliente" %>
   <%= f.collection_select(:client_id, Client.all, :id, :name, prompt: true) %>
+  <%= link_to "Crear Cliente", new_client_path(:from => "new_sale") %>
   <br>
   <label for="state"> Estado: </label>
-  <%= select_tag "state", options_from_collection_for_select(State.all, "id", "name") %>
+  <%= select_tag "state", options_from_collection_for_select(State.all, "id", "name") %><br>
+  <%= f.label :paid, "Dinero Pagado"%>
+  <%= f.number_field :paid %><br>
   <br><br>
   <div id="sale_products">
     <%= f.fields_for :sale_products do |pf|%>

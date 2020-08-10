@@ -1,5 +1,5 @@
 <h1>Clientes</h1><br><br>
-<%= link_to "Crear Cliente", new_client_path %>
+<%= link_to "Crear Cliente", new_client_path, class: "button is-primary is-light" %>
 <br><br>
 <div class="container">
   <div class="columns is-centered is-vcentered">
@@ -10,6 +10,8 @@
       <th>ID</th>
       <th>Nombre</th>
       <th>Deuda</th>
+      <th>Sector</th>
+      <th>Telefono</th>
       <th>Opciones</th>
     </tr>
   </thead>
@@ -23,7 +25,9 @@
       <% else %>
         <td>-</td>
       <% end %>
-      <td><%= link_to "Editar", edit_client_path(cliente.id) %> | <%= link_to "Eliminar", client_path(cliente.id), data: {method: :delete} %></td>
+      <td><%= cliente.direction.sector if cliente.direction.sector.present? %></td>
+      <td><%= cliente.phone if cliente.phone.present? %></td>
+      <td><%= link_to "Editar", edit_client_path(cliente.id), class: "button is-primary" %>  <%= link_to "Eliminar", client_path(cliente.id), data: {method: :delete}, class: "button is-danger" %></td>
     </tr>
     <% end %>
   </tbody>

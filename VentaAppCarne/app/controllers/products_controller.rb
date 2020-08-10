@@ -52,7 +52,8 @@ class ProductsController < ApplicationController
       :name,
       :unit_price,
       :unit_metric,
-      :supp_price
+      :supp_price,
+      :real_weight
     )
   end
 end

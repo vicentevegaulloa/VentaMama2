@@ -55,18 +55,21 @@ productos.each do |p|
 end
 
 # Client.all.each do |c|
-#   num_sales = rand(1..10)
+#   num_sales = rand(1..3)
 #   num_states = State.all.length
 #   puts "Estados: #{num_states}"
 #   num_sales.times do
 #     s = Sale.create!(
-#       client_id: c.id
+#       client_id: c.id,
+#       paid: 0
 #     )
-#     s.products << Product.all.sample(1 + rand(Product.all.count))
-#     s.sale_products.each do |sp|
-#       sp.update(
+#     products_list = Product.all.sample(1 + rand(Product.all.count))
+#     products_list.each do |p|
+#       SaleProduct.create!(
+#         sale_id: s.id,
 #         cantidad: rand(1..3),
-#         real_weight: rand((sp.product.estimated_weight * 0.75)..(sp.product.estimated_weight * 1.25))
+#         real_weight: rand((p.estimated_weight * 0.75)..(p.estimated_weight * 1.25)),
+#         product_id: p.id
 #       )
 #     end
 #     for i in 1..rand(1..num_states)
@@ -80,6 +83,11 @@ end
 #       puts st.updated_at
 #       st.save(touch: false)
 #       puts st.updated_at
+#     end
+#     if s.sale_states.max_by {|state| state.state_id}.state_id == 2 and rand(1..9) < 4
+#       s.update(paid: rand(1..s.total))
+#     elsif s.sale_states.max_by {|state| state.state_id}.state_id == 3
+#       s.update(paid: s.total)
 #     end
 #   end
 # end

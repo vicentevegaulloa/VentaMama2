@@ -1,5 +1,5 @@
 class SalesController < ApplicationController
-  before_action :set_sale, only: [:show, :edit, :update, :destroy]
+  before_action :set_sale, only: [:show, :edit, :update, :destroy, :next_state]
   def index
     @sales = Sale.search(params[:search])
   end
@@ -24,7 +24,15 @@ class SalesController < ApplicationController
           sp.update(cantidad: 1)
         end
       end
+      if @sale.states.maximum(:id) == 1
+        @sale.update(paid: 0)
+      elsif @sale.states.maximum(:id) == 3
+        @sale.update(paid: @sale.total)
+      elsif @sale.paid==nil
+        @sale.update(paid: 0)
+      end
       redirect_to search_path(1)
+
     else
       redirect_to new_sale_path
     end
@@ -74,17 +82,27 @@ class SalesController < ApplicationController
     @sale = Sale.find(params[:id])
   end
 
+  def next_state
+    if State.find(@sale.states.maximum(:id) + 1) == 3
+      @sale.update(paid: @sale.total)
+    end
+    @sale.states << State.find(@sale.states.maximum(:id) + 1)
+    redirect_to search_path(1)
+  end
+
 
   def sale_params
     params.require(:sale).permit(
       :client_id,
       :search,
       :state,
+      :paid,
       sale_products_attributes:
         [
           :id,
           :cantidad,
           :product_id,
+          :real_weight,
           :_destroy
           ])
   end

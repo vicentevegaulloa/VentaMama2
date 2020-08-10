@@ -1,0 +1,47 @@
+<h1>Ventas</h1><br><br>
+<%= link_to "Crear Venta", new_sale_path %><br>
+<%= link_to "Nuevo Periodo de Venta", new_sale_period_path %><br>
+<%= link_to "Ver Periodos de Venta", sale_periods_path %>
+<br><br>
+<div id="new-search">
+  <%= link_to 'Filtrar', new_search_path, remote: true %>
+</div>
+
+<div class="container">
+  <div class="columns is-centered is-vcentered">
+    <div class="column is-narrow has-text-centered">
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= link_to "ID" %></th>
+      <th><%= link_to "Cliente"%></th>
+      <th><%= link_to "Estado" %></th>
+      <th><%= link_to "Fecha" %></th>
+      <th><%= link_to "Total" %></th>
+      <th><%= link_to "Opciones" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @search.sales.each do |venta|%>
+    <tr>
+      <th><%= link_to venta.id, sale_path(venta.id)%></th>
+      <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%></td>
+      <td>
+        <%= State.find(venta.sale_states.order("updated_at DESC").first.state_id).name %>
+      </td>
+      <td>
+        <%= venta.sale_states.maximum("updated_at").strftime("%d-%m-%Y") %>
+      </td>
+      <td>$<%= venta.total %></td>
+      <td>
+        <%= link_to "Editar", edit_sale_path(venta.id)%> |
+        <%= link_to "Eliminar", sale_path(venta.id), method: :delete %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>

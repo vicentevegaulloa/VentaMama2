@@ -2,10 +2,10 @@
 <h2>
   <strong>Cliente</strong>
 </h2>
-
-<%= link_to "Editar", edit_client_path(@client.id) %>
-<%= link_to "Eliminar", @client, data: {method: :delete} %>
-
+<br>
+<%= link_to "Editar", edit_client_path(@client.id), class: "button is-primary is-light" %>
+<%= link_to "Eliminar", @client, data: {method: :delete}, class: "button is-danger is-light" %>
+<br><br>
 <div class="container">
   <div class="columns is-centered is-vcentered">
     <div class="column is-narrow has-text-centered">
@@ -54,6 +54,12 @@
 <table class="table">
 
   <tbody>
+
+    <tr>
+      <td>Comuna</td>
+      <td><%= @direction.comuna %></td>
+    </tr>
+
     <tr>
       <td>Sector</td>
       <td><%= @direction.sector %></td>
@@ -110,8 +116,8 @@
       </td>
       <td>$<%= venta.total %></td>
       <td>
-        <%= link_to "Editar", edit_sale_path(venta.id)%> |
-        <%= link_to "Eliminar", sale_path(venta.id), method: :delete %>
+        <%= link_to "Editar", edit_sale_path(venta.id), class: "button is-primary"%>
+        <%= link_to "Eliminar", sale_path(venta.id), method: :delete, class: "button is-danger" %>
       </td>
     </tr>
     <tr class="hidden-row">

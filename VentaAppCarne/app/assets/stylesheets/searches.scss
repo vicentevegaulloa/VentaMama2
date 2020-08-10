@@ -36,11 +36,32 @@ tr.hidden-row {
   padding: 10px;
 }
 
+
 .deuda {
   color: red;
 }
 
+.table.totales-table {
+  border-radius: 15px;
+  background-color: #f146683b;
+  margin-top: 5px;
+  width: 100%
+}
 
+.paid {
+  color: green
+}
+
+
+.table tr .opciones {
+  text-align: right;
+}
+
+
+
+.table tr:not(.hidden-row) td, .table tr:not(.hidden-row) th {
+  vertical-align: middle;
+}
 //
 // tr.normal-sale-row:hover + tr.hidden-row {
 //   display: table-row;

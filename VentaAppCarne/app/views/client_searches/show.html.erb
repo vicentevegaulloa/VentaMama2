@@ -1,12 +1,10 @@
-<h1>
-  <strong>Ventas</strong>
-</h1>
+<h1>Ventas</h1>
 <br>
-<%= link_to "Crear Venta", new_sale_path, class: "button is-primary is-light" %><br><br>
+<%= link_to "Crear Venta", new_sale_path %><br>
 <div id="new-search">
-  <%= link_to 'Filtrar', new_search_path, remote: true, class: "button is-info is-light" %>
+  <%= link_to 'Filtrar', new_search_path, remote: true %>
 </div>
-<br>
+
 <div class="container">
   <div class="columns is-centered is-vcentered">
     <div class="column has-text-centered">
@@ -80,12 +78,9 @@
       <span class="paid">($<%= venta.paid %>)</span>
       <% end %>
       </td>
-      <td class="opciones">
-        <% if venta.states.maximum(:id) < 3 %>
-          <%= link_to State.find(venta.states.maximum(:id) + 1).name, next_state_sale_path(venta.id), class: "button is-warning " %>
-        <% end %>
-        <%= link_to "Editar", edit_sale_path(venta.id), class: "button is-primary"%>
-        <%= link_to "Eliminar", sale_path(venta.id), method: :delete, class: "button is-danger" %>
+      <td>
+        <%= link_to "Editar", edit_sale_path(venta.id)%> |
+        <%= link_to "Eliminar", sale_path(venta.id), method: :delete %>
       </td>
     </tr>
     <tr class="hidden-row">

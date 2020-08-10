@@ -1,0 +1,2 @@
+class ClientSearch < ApplicationRecord
+end

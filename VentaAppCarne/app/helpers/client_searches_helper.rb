@@ -1,0 +1,2 @@
+module ClientSearchesHelper
+end

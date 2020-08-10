@@ -6,13 +6,23 @@ class ClientsController < ApplicationController
     end
 
     def new
+      if params[:from] == "new_sale"
+        @from = "new_sale"
+      end
       @client = Client.new
       @direction = @client.build_direction
     end
 
     def create
       @client = Client.create(client_params)
-      redirect_to clients_path
+      if params[:from] == "new_sale"
+        puts "peo"
+        redirect_to new_sale_path
+      else
+        puts params[:value]
+        redirect_to clients_path
+      end
+
     end
 
     def show
@@ -51,6 +61,7 @@ class ClientsController < ApplicationController
           :id,
           :sector,
           :street,
+          :comuna,
           :_destroy
           ])
   end

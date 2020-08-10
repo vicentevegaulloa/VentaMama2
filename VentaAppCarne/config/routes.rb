@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   devise_for :admins
   resources :sale_periods
-  resources :sales
+  resources :sales do
+    member do
+      get :next_state
+    end
+  end
   resources :products
   resources :searches
+
+  # resources :client_searches
   resources :clients do
     resources :directions
   end
