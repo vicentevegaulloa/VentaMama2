@@ -25,15 +25,15 @@
   </thead>
   <tbody>
     <tr>
-      <td><%= @search.sales.length %></td>
+      <td><%= number_with_delimiter(@search.sales.length) %></td>
       <% inner_query_dates = SaleState.select("sale_id, MAX(state_id) AS max_state").group(:sale_id).to_sql %>
-      <td><%= Sale.where(id: @search.sales.map(&:id)).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=1").length %></td>
-      <td>$<%= Sale.where(id: @search.sales.map(&:id)).joins({:sale_products => :product}).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=1").sum("sale_products.cantidad*products.unit_price*sale_products.real_weight").round %></td>
-      <td><%= Sale.where(id: @search.sales.map(&:id)).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=2").length %></td>
-      <td>$<%= Sale.where(id: @search.sales.map(&:id)).joins({:sale_products => :product}).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=2").sum("(sale_products.cantidad*products.unit_price*sale_products.real_weight)").round - Sale.where(id: @search.sales.map(&:id)).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=2").sum("sales.paid").round%></td>
-      <td><%= Sale.where(id: @search.sales.map(&:id)).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=3").length %></td>
-      <td>$<%= Sale.where(id: @search.sales.map(&:id)).sum("sales.paid").round %></td>
-      <td>$<%= Sale.where(id: @search.sales.map(&:id)).joins({:sale_products => :product}).sum("sale_products.cantidad*products.unit_price*sale_products.real_weight").round %></td>
+      <td><%= number_with_delimiter(Sale.where(id: @search.sales.map(&:id)).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=1").length, delimiter: ".") %></td>
+      <td>$<%= number_with_delimiter(Sale.where(id: @search.sales.map(&:id)).joins({:sale_products => :product}).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=1").sum("sale_products.cantidad*products.unit_price*sale_products.real_weight").round, delimiter: ".") %></td>
+      <td><%= number_with_delimiter(Sale.where(id: @search.sales.map(&:id)).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=2").length, delimiter: ".") %></td>
+      <td>$<%= number_with_delimiter(Sale.where(id: @search.sales.map(&:id)).joins({:sale_products => :product}).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=2").sum("(sale_products.cantidad*products.unit_price*sale_products.real_weight)").round - Sale.where(id: @search.sales.map(&:id)).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=2").sum("sales.paid").round, delimiter: ".")%></td>
+      <td><%= number_with_delimiter(Sale.where(id: @search.sales.map(&:id)).joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND group_states.max_state=3").length, delimiter: ".") %></td>
+      <td>$<%= number_with_delimiter(Sale.where(id: @search.sales.map(&:id)).sum("sales.paid").round, delimiter: ".") %></td>
+      <td>$<%= number_with_delimiter(Sale.where(id: @search.sales.map(&:id)).joins({:sale_products => :product}).sum("sale_products.cantidad*products.unit_price*sale_products.real_weight").round, delimiter: ".") %></td>
     </tr>
   </tbody>
 </table>
@@ -58,9 +58,9 @@
   <tbody>
     <% @search.sales.each do |venta|%>
     <tr class="normal-sale-row">
-      <th><%= link_to venta.id, sale_path(venta.id)%></th>
+      <th><%= link_to number_with_delimiter(venta.id, delimiter: "."), sale_path(venta.id)%></th>
       <% if venta.client.deuda > 0 %>
-        <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%> <span class="deuda">($<%= venta.client.deuda %>)</span></td>
+        <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%> <span class="deuda">($<%= number_with_delimiter(venta.client.deuda, delimiter: ".") %>)</span></td>
       <% else %>
         <td><%= link_to venta.client.name.split.map(&:capitalize).join(' ') , client_path(venta.client.id)%></td>
       <% end %>
@@ -75,9 +75,9 @@
           <%= SaleState.find_by(state_id: venta.sale_states.maximum("state_id"), sale_id: venta.id).updated_at.strftime("%d-%m-%Y") %>
         <% end %>
       </td>
-      <td>$<%= venta.total %>
+      <td>$<%= number_with_delimiter(venta.total, delimiter: ".") %>
       <% if venta.paid > 0 and venta.sale_states.max_by {|state| state.state_id}.state_id == 2 %>
-      <span class="paid">($<%= venta.paid %>)</span>
+      <span class="paid">($<%= number_with_delimiter(venta.paid, delimiter: ".") %>)</span>
       <% end %>
       </td>
       <td class="opciones">
@@ -145,6 +145,7 @@
                             <th>Producto</th>
                             <th>Cantidad</th>
                             <th>Precio Unidad</th>
+                            <th>Peso Real (Estimado si no existe real)</th>
                             <th>Precio Total</th>
                           </tr>
                         </thead>
@@ -153,10 +154,18 @@
                             <tr>
                               <td><%= sp.product.name %></td>
                               <td><%= sp.cantidad %></td>
-                              <td><%= sp.product.unit_price %></td>
-                              <td><%= sp.product.unit_price * sp.cantidad %></td>
+                              <td>$<%= number_with_delimiter(sp.product.unit_price, delimiter: ".") %></td>
+                              <td><%= number_with_delimiter(sp.real_weight, delimiter: ".") %> kg</td>
+                              <td>$<%= number_with_delimiter(((sp.cantidad) * sp.product.unit_price * sp.real_weight).to_i, delimiter: ".")  %></td>
                             </tr>
                           <% end %>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Total:</td>
+                            <td >$<%= number_with_delimiter(venta.total, delimiter: ".") %></td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>

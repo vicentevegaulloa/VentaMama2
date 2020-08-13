@@ -12,8 +12,9 @@ class Search < ApplicationRecord
 
     inner_query_dates = SaleState.select("sale_id, MAX(state_id) AS max_state").group(:sale_id).to_sql
     #fecha
+
     sales = sales.joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND sale_states.updated_at >= ?", updated_open) if updated_open.present?
-    sales = sales.joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND sale_states.updated_at < ?", updated_close) if updated_close.present?
+    sales = sales.joins(:sale_states).joins("INNER JOIN (#{inner_query_dates}) AS group_states ON sales.id=group_states.sale_id").where("group_states.sale_id=sales.id AND group_states.max_state=sale_states.state_id AND sale_states.updated_at < ?", (updated_close.to_datetime + 1.days).to_s) if updated_close.present?
     #products
     if products.present?
       productos = JSON.parse(products.delete('\\"'))

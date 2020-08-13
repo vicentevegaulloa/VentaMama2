@@ -21,11 +21,11 @@
   <tbody>
     <% @products.each do |producto|%>
     <tr class="current-product-row">
-      <th><%= producto.id%></th>
+      <th><%= number_with_delimiter(producto.id, delimiter: ".")%></th>
       <td><%= link_to producto.name, product_path(producto.id)%></td>
-      <td>$<%= producto.unit_price %></td>
-      <td>$<%= producto.supp_price %></td>
-      <td><%= producto.estimated_weight %> kg</td>
+      <td>$<%= number_with_delimiter(producto.unit_price, delimiter: ".") %></td>
+      <td>$<%= number_with_delimiter(producto.supp_price, delimiter: ".") %></td>
+      <td><%= number_with_delimiter(producto.estimated_weight, delimiter: ".") %> kg</td>
       <td><%= producto.created_at.strftime("%d-%m-%Y") %></td>
       <td><%= link_to "Actualiza", new_product_path(:base_id => producto.id), class: "button is-warning" %>
         <%= link_to "Eliminar", product_path(producto.id), data: {method: :delete}, class: "button is-danger" %>
@@ -35,11 +35,11 @@
     <% Product.where(name: producto.name).order("products.created_at DESC").each do |ex_producto| %>
     <% if ex_producto != producto %>
     <tr class="hidden-product-row">
-      <th><%= ex_producto.id%></th>
+      <th><%= number_with_delimiter(ex_producto.id, delimiter: ".")%></th>
       <td><%= link_to ex_producto.name, product_path(ex_producto.id)%></td>
-      <td>$<%= ex_producto.unit_price %></td>
-      <td>$<%= ex_producto.supp_price %></td>
-      <td><%= ex_producto.estimated_weight %> kg</td>
+      <td>$<%= number_with_delimiter(ex_producto.unit_price, delimiter: ".") %></td>
+      <td>$<%= number_with_delimiter(ex_producto.supp_price, delimiter: ".") %></td>
+      <td><%= number_with_delimiter(ex_producto.estimated_weight, delimiter: ".") %> kg</td>
       <td><%= ex_producto.created_at.strftime("%d-%m-%Y") %></td>
       <td class="opciones"><%= link_to "Eliminar", product_path(ex_producto.id), data: {method: :delete}, class: "button is-danger" %>
         <%= link_to "Editar", edit_product_path(ex_producto.id), class: "button is-primary" %>

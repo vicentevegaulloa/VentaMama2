@@ -62,6 +62,10 @@ tr.hidden-row {
 .table tr:not(.hidden-row) td, .table tr:not(.hidden-row) th {
   vertical-align: middle;
 }
+
+tr:hover {
+  background-color: #efefef;
+}
 //
 // tr.normal-sale-row:hover + tr.hidden-row {
 //   display: table-row;

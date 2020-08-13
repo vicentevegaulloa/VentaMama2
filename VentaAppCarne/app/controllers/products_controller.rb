@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
 
     def create
       @product = Product.create(product_params)
+      puts "PRODUCTO: #{@product}"
       if not @product.estimated_weight
         @product.update(estimated_weight: 1)
       end
@@ -53,7 +54,7 @@ class ProductsController < ApplicationController
       :unit_price,
       :unit_metric,
       :supp_price,
-      :real_weight
+      :estimated_weight
     )
   end
 end
